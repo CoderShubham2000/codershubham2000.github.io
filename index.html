@@ -495,10 +495,19 @@
     <div class="container">
 
       <div class="section-title">
-        <h2>Resume</h2>
-        <p>Check My Resume</p>
-      </div>
-
+        <h2>Resume (Click to <strong>download</strong> ⤵️)</h2>
+        <p onclick="downloadPDF()" 
+          style="cursor: pointer; color: #18D26E; font-weight: bold; display: inline-flex; align-items: center; gap: 5px;">Check My Resume
+        </p>
+      </div>    
+    <script>
+        function downloadPDF() {
+            const link = document.createElement('a');
+            link.href = 'assets/documents/Shubham_Tribedi_Resume.pdf';
+            link.download = 'Shubham_Tribedi_Resume.pdf'; // This sets the downloaded file name
+            link.click();
+        }
+    </script>
       <div class="row">
         <div class="col-lg-6">
           <h3 class="resume-title">Summary</h3>
